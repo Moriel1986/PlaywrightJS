@@ -8,13 +8,13 @@ test('Page Playwright test', async ({page})=>
   // Click a:has-text("Log in")
   await page.locator('a:has-text("Log in")').click();
   // Click text=Log in × Username: Password: Close Log in >> input[type="text"]
-  await page.locator('text=Log in × Username: Password: Close Log in >> input[type="text"]').click();
+  await page.locator('text=Log in Username: Password: Close Log in >> input[type="text"]').click();
   // Fill text=Log in × Username: Password: Close Log in >> input[type="text"]
-  await page.locator('text=Log in × Username: Password: Close Log in >> input[type="text"]').fill('Moriel1986');
+  await page.locator('text=Log in Username: Password: Close Log in >> input[type="text"]').fill('Moriel1986');
   // Click text=Log in × Username: Password: Close Log in >> input[type="password"]
-  await page.locator('text=Log in × Username: Password: Close Log in >> input[type="password"]').click();
+  await page.locator('text=Log in Username: Password: Close Log in >> input[type="password"]').click();
   // Fill text=Log in × Username: Password: Close Log in >> input[type="password"]
-  await page.locator('text=Log in × Username: Password: Close Log in >> input[type="password"]').fill('Kobegoat#0824');
+  await page.locator('text=Log in Username: Password: Close Log in >> input[type="password"]').fill('Kobegoat#0824');
   // Click button:has-text("Log in")
   await page.locator('button:has-text("Log in")').click();
   await expect(page).toHaveURL('https://www.demoblaze.com/');
@@ -33,8 +33,7 @@ test('Page Playwright test', async ({page})=>
   await expect(page).toHaveURL('https://www.demoblaze.com/prod.html?idp_=15#');
   // Click text=Home (current)
   await page.locator('text=Home (current)').click();
-  await expect(page).toHaveURL('https://www.demoblaze.com/index.html');
-    
+  await expect(page).toHaveURL('https://www.demoblaze.com/index.html'); 
 });
 
 
