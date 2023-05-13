@@ -17,6 +17,7 @@ export default class HomePage extends BasePage {
   readonly SignUpCloseButton: Locator;
   readonly SignUpbutton: Locator;
   
+  
 
   constructor(page: Page) {
     super(page);
@@ -32,7 +33,7 @@ export default class HomePage extends BasePage {
     this.TopNavLogIn = this.page.getByRole('link', { name: 'Log in' });
     this.TopNavSignUp =  this.page.getByRole('link', { name: 'Sign up' })
     this.SignUpCloseButton = this.page.getByRole('dialog', { name: 'New message' }).getByText('Close');
-    this.SignUpbutton = this.page.getByRole('button', { name: 'Send message' });
+    
   }  
 
   // actions  
@@ -73,9 +74,6 @@ export default class HomePage extends BasePage {
 
   async navigateToAboutUs(){
     await this.TopNavAboutUs.click();
-  }
-  async closeAboutUs(){
-    await this.TopNavAboutUsClose.click();
   }
 
   async navigateToCarts(){
