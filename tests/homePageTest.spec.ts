@@ -16,7 +16,7 @@ test('DemoBlaze Home Page test', async ({ page }) => {
     const sendMsg = new ContactForm(page);
     await DBHomePage.navigateToContacts();
     await sendMsg.fillContactForm(sndMsgData);
-    
+    await buildTest.closeApp();
 
 
 
