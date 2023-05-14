@@ -4,6 +4,8 @@ import { Locator, Page } from '@playwright/test';
         contactEmail: string,
         contactName: string,
         message: string
+        url: string,
+        phoneNum : string
         
     };
 
@@ -12,6 +14,7 @@ import { Locator, Page } from '@playwright/test';
         readonly contactEmailField: Locator;
         readonly contactNameField: Locator;
         readonly messageField: Locator;
+        readonly phoneNumField: Locator;
         readonly TopNavContactSendMsgbutton: any;
         
         

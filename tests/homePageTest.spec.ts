@@ -20,8 +20,6 @@ test('DemoBlaze Home Page test', async ({ page }) => {
     await buildTest.closeApp
 
 
-
-
 });
 
   
