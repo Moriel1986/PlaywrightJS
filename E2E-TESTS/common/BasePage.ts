@@ -1,8 +1,9 @@
 import { Locator, Page } from '@playwright/test';
-
+import { createNewContactFields } from '../utils/contactForm';
 
 export default class BasePage {
   readonly page: Page;
+  url = 'https://www.demoblaze.com/index.html';
   
 
   constructor(page: Page) { 
@@ -10,15 +11,20 @@ export default class BasePage {
   }
 
   async NavtoApp() {
-    await this.page.goto('https://www.demoblaze.com/index.html');
+    await this.page.goto(this.url);
   }
 
   async closeApp() {
+    await this.wait(3000);
     await this.page.close();
   }
 
   async logOut() {
     
+  }
+
+  async wait (seconds: any){
+    await new Promise(resolve => setTimeout(resolve, seconds));
   }
 
  

@@ -12,6 +12,7 @@ import { Locator, Page } from '@playwright/test';
         readonly contactEmailField: Locator;
         readonly contactNameField: Locator;
         readonly messageField: Locator;
+        readonly phoneNumField: Locator;
         readonly TopNavContactSendMsgbutton: any;
         
         
@@ -28,24 +29,28 @@ import { Locator, Page } from '@playwright/test';
 
     async fillContactForm(values: any) {
         const { contactEmail, contactName, message } = values;
-            
+
+        await new Promise(resolve => setTimeout(resolve, 5000));    
+
         await this.contactEmailField.focus();
-        await this.contactEmailField.type(contactEmail)
+        await this.contactEmailField.fill(contactEmail)
 
         await this.contactNameField.focus();
-        await this.contactNameField.type(contactName);
+        await this.contactNameField.fill(contactName);
 
         await this.messageField.focus();
-        await this.messageField.type(message);
+        await this.messageField.fill(message);
 
      }
 
-     async closeContact(){
+
+      async closeContact(){
 
       }
     
       async sendMessage(){
         await this.TopNavContactSendMsgbutton.click();
+
       }
 
 
