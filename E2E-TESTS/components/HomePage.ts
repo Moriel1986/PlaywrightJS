@@ -46,11 +46,6 @@ export default class HomePage extends BasePage {
   async logIn(orgName: string, roleName: string) {
     
   }
-  async contactForm(){
-    await this.page.locator('#recipient-email').fill('');
-    await this.page.getByLabel('Contact Email:').fill('');
-    await this.page.getByLabel('Message:').fill('');
-  }
 
   async navigateToPhones(){
     await this.leftNavPhones.click();
@@ -93,6 +88,12 @@ export default class HomePage extends BasePage {
   async expectDemoBlazeLaunch(){
     await expect(this.page.getByRole('link', { name: 'PRODUCT STORE' })).toHaveText('PRODUCT STORE');
     await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+  }
+
+  async expectContactMsg(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+    // await new Promise(resolve => setTimeout(resolve, 8000));
+    // await expect(this.page.getByRole('button', { name: 'Send message' })).toBeVisible();
   }
 
   

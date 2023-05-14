@@ -17,6 +17,7 @@ test('DemoBlaze Home Page test', async ({ page }) => {
     await DBHomePage.navigateToContacts();
     await sendMsg.fillContactForm(sndMsgData);
     await sendMsg.sendMessage();
+    await DBHomePage.expectContactMsg();
     await buildTest.closeApp();
 
 });
