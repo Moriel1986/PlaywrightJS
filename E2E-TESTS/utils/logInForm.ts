@@ -1,7 +1,7 @@
-import { SignUpFormFill } from "../components/SignUpFillForm";
+import { LogInFormFill } from "../components/LogInFillForm";
 
 
-export const createNewSignUpFields = (): SignUpFormFill => {
+export const createLogInFields = (): LogInFormFill => {
 
     const random13DigitInteger = '9' + Math.floor(Math.random() * 1000000);
     console.log(random13DigitInteger);
