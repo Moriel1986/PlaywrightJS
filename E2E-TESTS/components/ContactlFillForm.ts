@@ -53,7 +53,6 @@ import { Locator, Page } from '@playwright/test';
 
       }
 
-
 }
 
 export default ContactForm;

@@ -4,7 +4,7 @@ import HomePage from '../E2E-TESTS/components/HomePage';
 
 
 
-test('DemoBlaze Home Page test', async ({ page }) => {
+test('DemoBlaze About Us test', async ({ page }) => {
     const buildTest = new BasePage(page);
     await buildTest.NavtoApp();
     const DBHomePage = new HomePage(page);

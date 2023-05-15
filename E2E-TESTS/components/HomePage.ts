@@ -96,5 +96,12 @@ export default class HomePage extends BasePage {
     // await expect(this.page.getByRole('button', { name: 'Send message' })).toBeVisible();
   }
 
+  async expectSignUp(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+    // await new Promise(resolve => setTimeout(resolve, 8000));
+    // await expect(this.page.getByRole('button', { name: 'Send message' })).toBeVisible();
+
   
+  }
+
 }
