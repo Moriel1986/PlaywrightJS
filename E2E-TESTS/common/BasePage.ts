@@ -1,5 +1,4 @@
 import { Locator, Page } from '@playwright/test';
-import { createNewContactFields } from '../utils/contactForm';
 
 export default class BasePage {
   readonly page: Page;
