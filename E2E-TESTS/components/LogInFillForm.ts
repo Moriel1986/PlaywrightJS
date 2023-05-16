@@ -38,6 +38,11 @@ import { Locator, Page } from '@playwright/test';
 
      }
 
+    //  if (await this.termOptingDeadlineField.isVisible()) {
+    //     await this.termOptingDeadlineField.focus();
+    //     await this.termOptingDeadlineField.type(optDate);
+    // }
+
 
       async closeContact(){
         await this.closeButton.click();
