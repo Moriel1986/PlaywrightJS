@@ -18,6 +18,7 @@ export default class BasePage {
     await this.page.close();
   }
 
+  //Global Wait Method
   async wait (seconds: any){
     await new Promise(resolve => setTimeout(resolve, seconds));
   }

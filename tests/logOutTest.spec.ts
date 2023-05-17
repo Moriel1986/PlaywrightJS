@@ -19,6 +19,7 @@ test('DemoBlaze Log In test', async ({ page }) => {
     await DBHomePage.expectLogIn();
     await DBHomePage.navigateToHome();
     await DBHomePage.clicklogOut();
+    await DBHomePage.expectLogOut();
     await buildTest.closeApp();
 
 
