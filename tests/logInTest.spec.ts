@@ -19,5 +19,4 @@ test('DemoBlaze Log In test', async ({ page }) => {
     await DBHomePage.expectLogIn();
     await buildTest.closeApp();
 
-
 });
