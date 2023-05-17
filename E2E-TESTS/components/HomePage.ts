@@ -101,14 +101,25 @@ export default class HomePage extends BasePage {
     await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
     // await new Promise(resolve => setTimeout(resolve, 8000));
     // await expect(this.page.getByRole('button', { name: 'Send message' })).toBeVisible();
+  }
 
+  async expectAboutUs(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    await expect(this.page.locator("//div[@id='navbarExample']//*[contains(text(),'About us')]")).toContainText("About us");
   }
 
   async expectLogIn(){
     await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
     await new Promise(resolve => setTimeout(resolve, 4000));
     await expect(this.page.locator("//*[contains(text(),'Welcome Moriel86')]")).toContainText("Welcome Moriel86");
-
-
  }
+
+  async expectLogOut(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    await expect(this.page.locator("//div[@id='navbarExample']//*[contains(text(),'Log in')]")).toContainText("Log in");
+  }
+
+
 }

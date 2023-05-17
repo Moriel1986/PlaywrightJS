@@ -9,6 +9,7 @@ test('DemoBlaze About Us test', async ({ page }) => {
     await buildTest.NavtoApp();
     const DBHomePage = new HomePage(page);
     await DBHomePage.navigateToAboutUs();
+    await DBHomePage.expectAboutUs
     await DBHomePage.closeApp();
 
 });
