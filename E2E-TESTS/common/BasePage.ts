@@ -18,10 +18,6 @@ export default class BasePage {
     await this.page.close();
   }
 
-  async logOut() {
-    
-  }
-
   async wait (seconds: any){
     await new Promise(resolve => setTimeout(resolve, seconds));
   }
