@@ -3,12 +3,8 @@ on:
   push:
     branches: 
       - master
-  pull_request:
-    branches: 
-      - develop
-  # schedule: 
-  #   -cron : '45 7 * * * '
-  tests:
+jobs:
+  test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
