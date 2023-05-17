@@ -8,8 +8,7 @@ on:
       - master
 
   schedule: 
-    -cron : '45 7 * * 1'
-jobs:
+    -cron : '45 7 * * * '
   tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
