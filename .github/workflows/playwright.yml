@@ -6,7 +6,9 @@ on:
   pull_request:
     branches: 
       - master
-jobs:
+
+  schedule: 
+    -cron : '45 7 * * * '
   tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
