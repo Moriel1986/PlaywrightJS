@@ -38,10 +38,9 @@ export default class HomePage extends BasePage {
     
   }  
 
+
+
   // actions  
-
-
-  
 
   async clicklogOut() {
     await this.LogOutButton.click();
