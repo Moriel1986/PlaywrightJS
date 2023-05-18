@@ -7,7 +7,7 @@ on:
     branches: 
     - develop
 jobs:
-  tests:
+  tests: 
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
