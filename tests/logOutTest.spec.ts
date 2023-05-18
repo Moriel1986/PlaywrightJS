@@ -6,7 +6,7 @@ import { createLogInFields } from '../E2E-TESTS/utils/logInForm';
 
 
 
-test('DemoBlaze Log In test', async ({ page }) => {
+test('DemoBlaze Log Out test', async ({ page }) => {
     const buildTest = new BasePage(page);
     await buildTest.NavtoApp();
     const DBHomePage = new HomePage(page);
