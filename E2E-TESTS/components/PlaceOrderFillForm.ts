@@ -29,7 +29,7 @@ import { Locator, Page } from '@playwright/test';
 
     constructor(page: Page) {
         this.page = page;
-        this.nameField = this.page.getByLabel('Total: 1580');
+        this.nameField = this.page.locator("//input[@id='name']");
         this.countryField = this.page.getByLabel('Country:');
         this.cityField = this.page.getByLabel('City:');
         this.creditCardField = this.page.getByLabel('Credit card:');
