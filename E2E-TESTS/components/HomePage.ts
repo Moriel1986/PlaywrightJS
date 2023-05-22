@@ -30,7 +30,7 @@ export default class HomePage extends BasePage {
     this.TopNavContacts = this.page.getByRole('link', { name: 'Contact' });
     this.TopNavAboutUs = this.page.getByRole('link', { name: 'About us' });
     this.TopNavAboutUsClose = this.page.getByRole('link', { name: 'About us' });
-    this.TopNavCart =  this.page.getByRole('link', { name: 'Cart' });
+    this.TopNavCart =  this.page.getByRole('link', { name: 'Cart', exact: true });
     this.TopNavLogIn = this.page.getByRole('link', { name: 'Log in' });
     this.TopNavSignUp =  this.page.getByRole('link', { name: 'Sign up' })
     this.SignUpCloseButton = this.page.getByRole('dialog', { name: 'New message' }).getByText('Close');
@@ -119,6 +119,12 @@ export default class HomePage extends BasePage {
     await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
     await new Promise(resolve => setTimeout(resolve, 4000));
     await expect(this.page.locator("//div[@id='navbarExample']//*[contains(text(),'Log in')]")).toContainText("Log in");
+  }
+
+  async expectIphoneOrder(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    await expect(this.page.getByRole('heading', { name: 'Place order' })).toContainText("Place order");
   }
 
 
