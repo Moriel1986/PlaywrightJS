@@ -39,7 +39,6 @@ export default class HomePage extends BasePage {
   }  
 
 
-
   // actions  
 
   async clicklogOut() {
@@ -83,7 +82,6 @@ export default class HomePage extends BasePage {
   }
 
 
-
   //expect 
 
   async expectDemoBlazeLaunch(){
@@ -121,11 +119,10 @@ export default class HomePage extends BasePage {
     await expect(this.page.locator("//div[@id='navbarExample']//*[contains(text(),'Log in')]")).toContainText("Log in");
   }
 
-  async expectIphoneOrder(){
-    await expect(this.page).toHaveURL('https://www.demoblaze.com/index.html');
+  async expectPhoneOrder(){
+    await expect(this.page).toHaveURL('https://www.demoblaze.com/cart.html');
     await new Promise(resolve => setTimeout(resolve, 4000));
     await expect(this.page.getByRole('heading', { name: 'Place order' })).toContainText("Place order");
   }
-
 
 }
