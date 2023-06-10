@@ -82,6 +82,7 @@ import { Locator, Page } from '@playwright/test';
       }
     
       async clickPurchase(){
+        await new Promise(resolve => setTimeout(resolve, 2000));
         await this.purchaseButton.click();
 
       }

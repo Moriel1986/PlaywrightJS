@@ -32,5 +32,9 @@ test('DemoBlaze IPhone Order Test', async ({ page }) => {
     await placeOrder.fillPlaceOrderForm(orderForm);
     await DBHomePage.expectPhoneOrder();
     await placeOrder.clickPurchase();
+    await DBHomePage.clickPurchaseOkButton();
+    await placeOrder.clickPurchase();
+    await DBHomePage.clickPurchaseOkButton();
+    await DBHomePage.closeApp();
    
 });
