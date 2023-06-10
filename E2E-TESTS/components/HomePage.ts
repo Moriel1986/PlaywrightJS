@@ -17,6 +17,7 @@ export default class HomePage extends BasePage {
   readonly SignUpCloseButton: Locator;
   readonly SignUpbutton: Locator;
   readonly LogOutButton: Locator;
+  readonly PurchaseOkButton: Locator;
   
   
 
@@ -35,6 +36,8 @@ export default class HomePage extends BasePage {
     this.TopNavSignUp =  this.page.getByRole('link', { name: 'Sign up' })
     this.SignUpCloseButton = this.page.getByRole('dialog', { name: 'New message' }).getByText('Close');
     this.LogOutButton = this.page.locator("//*[contains(text(),'Log out')]");
+    this.PurchaseOkButton = this.page.getByRole('button', { name: 'OK' });
+
     
   }  
 
@@ -79,6 +82,9 @@ export default class HomePage extends BasePage {
 
   async navigateToSignUp(){
     await this.TopNavSignUp.click();
+  }
+  async clickPurchaseOkButton(){
+    await this.PurchaseOkButton.click();
   }
 
 
