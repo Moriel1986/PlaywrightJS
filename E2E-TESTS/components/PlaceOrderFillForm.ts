@@ -25,9 +25,8 @@ import { Locator, Page } from '@playwright/test';
         readonly addToCart: Locator;
         readonly placeOrder: Locator;
         readonly macBookPro: Locator;
+        readonly macBookAir: Locator;
 
-        
-    
 
     constructor(page: Page) {
         this.page = page;
@@ -42,6 +41,7 @@ import { Locator, Page } from '@playwright/test';
         this.iphoneItem = this.page.getByRole('link', { name: 'Iphone 6 32gb' });
         this.samsungGalaxyS7 = this.page.locator("//*[contains(text(),'Samsung galaxy s7')]");
         this.macBookPro = this.page.getByRole('link', { name: 'MacBook Pro' });
+        this.macBookAir = this.page.getByRole('link', { name: 'MacBook air' });
         this.addToCart = this.page.getByRole('link', { name: 'Add to cart' });
         this.placeOrder = this.page.getByRole('button', { name: 'Place Order' });
 
@@ -91,19 +91,28 @@ import { Locator, Page } from '@playwright/test';
 
       async clickIphone(){
         await this.iphoneItem.click();
+
       }
 
       async clickSamsungGalaxyS7(){
         await this.samsungGalaxyS7.click();
+
       }
 
       async clickMacbookPro(){
         await this.macBookPro.click();
+
+      }
+
+      async clickMacbookAir(){
+        await this.macBookAir.click();
+
       }
 
       async clickAddToCart(){
         await new Promise(resolve => setTimeout(resolve, 2000));
         await this.addToCart.click();
+
       }
         
 
@@ -114,7 +123,9 @@ import { Locator, Page } from '@playwright/test';
 
       async handleDialog(){
         this.page.reload();
+
       }
+
 }
 
 export default PlaceOrder;

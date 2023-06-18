@@ -8,7 +8,7 @@ import { createPlaceOrderFields } from '../E2E-TESTS/utils/placeOrderForm';
 
 
 
-test('DemoBlaze Macbook Pro Order Test', async ({ page }) => {
+test('DemoBlaze Macbook Air Order Test', async ({ page }) => {
     const buildTest = new BasePage(page);
     await buildTest.NavtoApp();
     const DBHomePage = new HomePage(page);
@@ -23,7 +23,7 @@ test('DemoBlaze Macbook Pro Order Test', async ({ page }) => {
     const orderForm = createPlaceOrderFields();
     const placeOrder = new PlaceOrder(page);
     await DBHomePage.navigateToLaptops();
-    await placeOrder.clickMacbookPro();
+    await placeOrder.clickMacbookAir();
     await placeOrder.clickAddToCart();
     await placeOrder.handleDialog();
     await DBHomePage.navigateToCarts();
