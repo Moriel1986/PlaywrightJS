@@ -7,21 +7,24 @@ export default class BasePage {
 
   constructor(page: Page) { 
     this.page = page;
+
   }
 
   async NavtoApp() {
     await this.page.goto(this.url);
+
   }
 
   async closeApp() {
     await this.wait(3000);
     await this.page.close();
+
   }
 
   //Global Wait Method
   async wait (seconds: any){
     await new Promise(resolve => setTimeout(resolve, seconds));
+
   }
 
- 
 };  
