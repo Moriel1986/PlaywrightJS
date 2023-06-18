@@ -21,9 +21,10 @@ import { Locator, Page } from '@playwright/test';
         readonly closeButton: Locator;
         readonly purchaseButton: Locator
         readonly iphoneItem: Locator;
-        readonly samsungGalaxyS7
+        readonly samsungGalaxyS7: Locator;
         readonly addToCart: Locator;
         readonly placeOrder: Locator;
+        readonly macBookPro: Locator;
 
         
     
@@ -40,6 +41,7 @@ import { Locator, Page } from '@playwright/test';
         this.purchaseButton = this.page.getByRole('button', { name: 'Purchase' });
         this.iphoneItem = this.page.getByRole('link', { name: 'Iphone 6 32gb' });
         this.samsungGalaxyS7 = this.page.locator("//*[contains(text(),'Samsung galaxy s7')]");
+        this.macBookPro = this.page.getByRole('link', { name: 'MacBook Pro' });
         this.addToCart = this.page.getByRole('link', { name: 'Add to cart' });
         this.placeOrder = this.page.getByRole('button', { name: 'Place Order' });
 
@@ -93,6 +95,10 @@ import { Locator, Page } from '@playwright/test';
 
       async clickSamsungGalaxyS7(){
         await this.samsungGalaxyS7.click();
+      }
+
+      async clickMacbookPro(){
+        await this.macBookPro.click();
       }
 
       async clickAddToCart(){
