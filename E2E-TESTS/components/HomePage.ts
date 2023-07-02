@@ -19,7 +19,6 @@ export default class HomePage extends BasePage {
   readonly LogOutButton: Locator;
   readonly PurchaseOkButton: Locator;
   
-  
 
   constructor(page: Page) {
     super(page);
@@ -147,7 +146,7 @@ export default class HomePage extends BasePage {
     await expect(this.page).toHaveURL('https://www.demoblaze.com/cart.html');
     await new Promise(resolve => setTimeout(resolve, 4000));
     await expect(this.page.getByRole('heading', { name: 'Place order' })).toContainText("Place order");
-    
+
   }
 
 }
